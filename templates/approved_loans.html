@@ -1,0 +1,48 @@
+
+
+{% block content %}
+
+ <center>
+
+<h1>{{title}}</h1>
+
+
+
+     
+
+
+<table >
+     <th >
+          <tr style="color: green; padding: 10px;">
+          
+               <td>Name</td>
+                <td>ID</td>
+               <td>Contact</td>
+               <td>Email</td>
+               <td>Amount</td>
+              
+               <td>Date</td>
+          </tr>
+     </th>
+
+{% for k in queryset %}
+
+<tbody >
+      <tr >
+          <td>{{forloop.counter}}</td>
+          <td>{{k.Your_name}}</td> 
+           <td>{{k.Your_id}}</td> 
+          <td>{{k.Your_contact}}</td>
+          <td>{{k.Your_email}}</td>
+          <td>{{k.Amount}}</td>
+          <td>{{k.Date}}</td>
+         
+     </tr>  
+     </center>
+  
+</tbody>
+{% endfor %}
+
+</table>
+
+{% endblock content %}

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+{% include 'base.html' %}
+
+
+{% block content %}
+
+<center><h1 style="color:purple;">Loan Application Form</h1>
+ 
+ </center>
+
+       <center>
+     <form method="post">
+          {% csrf_token %}
+
+        
+
+         {{form.as_p}}
+               
+        
+
+         <input type="submit" value="Apply For A Loan">
+
+
+          
+    
+     </form>
+     <br>
+     <br>
+     <br>
+      </center>
+      <p style="float: right; color: skyblue; " ,>Kennedy &reg;<p>
+
+       <h3 style="color:maroon;">&copy; Passy Micro Finance LTD, 2023</h3> 
+
+
+          
+
+{% endblock content %}
+
+</body>
+</html>

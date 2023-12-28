@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% include 'base.html' %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<center>
+	<h1>{{title}}</h1>
+
+	<form method="POST" action=".">
+		{% csrf_token %}
+
+		{{form.as_p}}
+
+		<button>Search</button>
+		
+	</form>
+		
+</center>
+</body>
+</html>
